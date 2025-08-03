@@ -24,19 +24,62 @@
             text-decoration: underline;
         }
 
-        .logo-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 5px;
-            text-align: center;
-            margin-top: 5px;
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        .logo {
-            max-height: 80px;
-            width: auto;
-            margin: 0 10px;
+        h1 {
+            color: #8B0000;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        /* Main layout using Flexbox */
+        .main-content {
+            display: flex;
+            gap: 30px;
+        }
+
+        .left-column {
+            flex: 0 0 300px; /* Fixed width for the left column on desktop */
+        }
+
+        .right-column {
+            flex: 1; /* Right column takes the remaining space */
+        }
+
+        .profile-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-box {
+            border: 2px solid #8B0000;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-box h3 {
+            color: #8B0000;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .contact-info {
+            margin-bottom: 10px;
+        }
+
+        .contact-info strong {
+            display: inline-block;
+            width: 80px;
         }
 
         .social-icons {
@@ -57,17 +100,64 @@
             opacity: 0.7;
         }
 
+        .year-label {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .logo-container {
+            margin-bottom: 15px;
+        }
+
+        /* IMPROVEMENT: Moved image styling from inline HTML to CSS */
+        .logo-container img {
+            display: block;
+            width: 80%;
+            max-width: 200px; /* Prevents logos from becoming too large */
+            height: auto;
+            margin: 0 auto; /* Center the logos */
+        }
+
+        .about-section h2 {
+            color: #8B0000;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .about-text {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .red-link {
+            color: #8B0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .red-link:hover {
+            text-decoration: underline;
+        }
+
+        .students-section {
+            margin-top: 20px;
+        }
+
+        .students-list {
+            padding-left: 20px;
+        }
+
+        .students-list li {
+            margin-bottom: 5px;
+        }
+
         .portfolio-gallery {
             display: flex;
             gap: 20px;
             margin-top: 20px;
             overflow-x: auto;
             padding: 10px 0;
-        }
-
-        .copyright {
-            font-size: 14px;
-            color: #666;
         }
 
         .portfolio-item {
@@ -103,7 +193,7 @@
 
         .publication img {
             width: 200px;
-            height: 100%;
+            height: auto;
             object-fit: contain;
             flex-shrink: 0;
         }
@@ -114,50 +204,23 @@
 
         .publication-buttons {
             margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .button {
             display: inline-block;
             padding: 5px 10px;
-            margin-right: 10px;
-            margin-bottom: 5px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 0.9em;
             color: #333;
-            text-decoration: none;
         }
 
         .button:hover {
-            background: #f5f5f5;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #8B0000;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            font-weight: bold;
-        }
-
-        .main-content {
-            display: flex;
-            gap: 30px;
-        }
-
-        .left-column {
-            flex: 0 0 300px;
-        }
-
-        .right-column {
-            flex: 1;
+            background-color: #e9e9e9;
+            text-decoration: none;
         }
 
         .footer {
@@ -167,165 +230,81 @@
             margin-top: 40px;
         }
 
-        .profile-image {
-            width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
+        .footer .social-icons {
+            font-size: 24px;
         }
 
-        .contact-box {
-            border: 2px solid #8B0000;
-            padding: 15px;
-            margin-bottom: 20px;
+        .copyright {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
         }
 
-        .contact-box h3 {
-            color: #8B0000;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
+        /* --- Responsive Styles --- */
 
-        .contact-info {
-            margin-bottom: 10px;
-        }
-
-        .contact-info strong {
-            display: inline-block;
-            width: 80px;
-        }
-
-        .about-section h2 {
-            color: #8B0000;
-            font-size: 1.4em;
-            margin-bottom: 15px;
-        }
-
-        .about-text {
-            text-align: justify;
-            margin-bottom: 20px;
-        }
-
-        .red-link {
-            color: #8B0000;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .red-link:hover {
-            text-decoration: underline;
-        }
-
-        .students-section {
-            margin-top: 20px;
-        }
-
-        .students-list {
-            margin-left: 20px;
-        }
-
-        .students-list li {
-            margin-bottom: 5px;
-        }
-
-        .year-label {
-            font-weight: bold;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        /* Mobile Responsive Styles */
+        /* For tablets and smaller devices (<= 768px) */
         @media (max-width: 768px) {
-            /* Keep flex-direction: row to display side-by-side */
             .main-content {
-                flex-direction: row;
+                /* IMPROVEMENT: Stack columns vertically for readability */
+                flex-direction: column;
                 gap: 20px;
             }
 
-            /* Allow columns to shrink based on content */
             .left-column {
-                flex: 0 0 300px; /* Maintain a fixed width for the left column, or adjust as needed */
-            }
-
-            .right-column {
-                flex: 1; /* Allow the right column to take remaining space */
+                /* Allow the left column to take full width */
+                flex: 1 1 auto;
             }
 
             .publication {
+                /* Stack publication image and text vertically */
                 flex-direction: column;
                 align-items: center;
+                text-align: center;
                 gap: 15px;
             }
 
             .publication img {
                 width: 100%;
-                max-width: 200px;
-                margin: 0 auto;
+                max-width: 250px;
             }
 
-            .social-icons {
-                gap: 15px;
-            }
-
-            .social-icons a img {
-                width: 28px;
-            }
-
-            .portfolio-item {
-                flex: 0 0 150px;
-            }
-
-            .portfolio-item img {
-                height: 200px;
-            }
-
-            .contact-info strong {
-                width: auto;
-                display: block;
-                margin-bottom: 5px;
-            }
-
-            .logo-container img {
-                max-width: 70%;
-            }
-
-            .footer {
-                padding: 15px;
-            }
-
-            .footer .social-icons {
-                gap: 20px;
+            .publication-buttons {
+                justify-content: center;
             }
 
             .about-text {
-                text-align: left;
+                text-align: left; /* Justified text is hard to read on narrow screens */
+            }
+
+            .portfolio-item {
+                flex: 0 0 160px;
+            }
+
+            .portfolio-item img {
+                height: 220px;
             }
         }
 
+        /* For mobile phones (<= 480px) */
         @media (max-width: 480px) {
             body {
-                padding: 5px;
+                padding: 10px 5px;
             }
 
             .container {
-                padding: 10px;
+                padding: 15px;
             }
 
             h1 {
-                font-size: 1.5em;
-            }
-
-            .contact-box {
-                padding: 10px;
-            }
-
-            .contact-box h3 {
-                font-size: 1.1em;
+                font-size: 1.8em;
             }
 
             .about-section h2 {
                 font-size: 1.2em;
+            }
+
+            .contact-box h3 {
+                font-size: 1.1em;
             }
 
             .publication-content h3 {
@@ -338,17 +317,18 @@
             }
 
             .portfolio-item {
-                flex: 0 0 120px;
+                flex: 0 0 140px;
             }
 
             .portfolio-item img {
-                height: 160px;
+                height: 180px;
             }
 
             .social-icons a img {
-                width: 24px;
+                width: 28px;
             }
         }
+
     </style>
 </head>
 <body>
@@ -383,263 +363,257 @@
 
                     <div class="year-label">2021 - now</div>
                     <div class="logo-container">
-                            <a href="https://sorbonne-universite.fr"><img src="./images/sorbonne.webp" width="80%" ></a>
+                        <a href="https://sorbonne-universite.fr"><img src="./images/sorbonne.webp"></a>
                     </div>
                     <div class="logo-container">
-                            <a href="https://www.cornell.edu"><img src="./images/Cornell-University-Logo.png" width="80%" ></a>
+                        <a href="https://www.cornell.edu"><img src="./images/Cornell-University-Logo.png"></a>
                     </div>
-                        <div class="logo-container">
-                            <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-ai-for-science/"><img src="./images/msra.jpeg" width="80%" ></a>
+                    <div class="logo-container">
+                        <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-ai-for-science/"><img src="./images/msra.jpeg"></a>
                     </div>
+
                     <div class="year-label">2014 - 2021</div>
                     <div class="logo-container">
-                      <a href="#"><img src="./images/UdL.svg.png" width="80%" ></a>
+                      <a href="#"><img src="./images/UdL.svg.png"></a>
                     </div>
-                        <div class="logo-container">
-                      <a href="#"><img src="./images/Orange_Labs.webp" width="80%" ></a>
+                    <div class="logo-container">
+                      <a href="#"><img src="./images/Orange_Labs.webp"></a>
                     </div>
                 </div>
                 <div class="contact-box">
                     <h3>Lectures & Venues</h3>
                     <div class="logo-container">
-                        <a href="#"><img src="./images/conf/aaai.jpg.png" width="80%" ></a>
-                </div>
+                        <a href="#"><img src="./images/conf/aaai.jpg.png"></a>
+                    </div>
                     <div class="logo-container">
-                        <a href="#"><img src="./images/conf/ggl.jpeg" width="80%" ></a>
-                </div>
+                        <a href="#"><img src="./images/conf/ggl.jpeg"></a>
+                    </div>
                      <div class="logo-container">
-                        <a href="#"><img src="./images/conf/roman.png" width="80%" ></a>
-                </div>
+                        <a href="#"><img src="./images/conf/roman.png"></a>
+                    </div>
                     <div class="logo-container">
-                        <a href="#"><img src="./images/conf/hf.jpg" width="80%" ></a>
-                </div>
+                        <a href="#"><img src="./images/conf/hf.jpg"></a>
+                    </div>
                     <div class="logo-container">
-                        <a href="#"><img src="./images/conf/eacl.webp" width="80%" ></a>
-                </div>
+                        <a href="#"><img src="./images/conf/eacl.webp"></a>
+                    </div>
                     <div class="logo-container">
-                        <a href="#"><img src="./images/conf/mistral.jpg" width="80%" ></a>
-                </div>
+                        <a href="#"><img src="./images/conf/mistral.jpg"></a>
+                    </div>
                      <div class="logo-container">
-                        <a href="#"><img src="./images/conf/IEEE.png" width="80%" ></a>
-                </div>
+                        <a href="#"><img src="./images/conf/IEEE.png"></a>
+                    </div>
                      <div class="logo-container">
-                        <a href="#"><img src="./images/conf/image-7.png" width="80%" ></a>
-                </div>
+                        <a href="#"><img src="./images/conf/image-7.png"></a>
+                    </div>
                     <div class="logo-container">
-                        <a href="#"><img src="./images/conf/sigchi.svg" width="80%" ></a>
-                </div>
+                        <a href="#"><img src="./images/conf/sigchi.svg"></a>
+                    </div>
                     <div class="logo-container">
-                        <a href="#"><img src="./images/conf/Logo_AP-HP.png" width="80%" ></a>
-                </div>
+                        <a href="#"><img src="./images/conf/Logo_AP-HP.png"></a>
+                    </div>
                      <div class="logo-container">
-                        <a href="#"><img src="./images/conf/logo.svg" width="80%" ></a>
-                </div>
-
+                        <a href="#"><img src="./images/conf/logo.svg"></a>
+                    </div>
                 </div>
             </div>
             <div class="right-column">
-             <div class="contact-box">
-                <div class="about-section">
-                    <h2>About me:</h2>
-                    <div class="about-text">
-              I am a research associate at <a href="https://www.sorbonne-universite.fr/en" class="red-link">Sorbonne University</a>, where I am a member of the ACIDE team at <a href="https://www.isir.upmc.fr/" class="red-link">Institute of Intelligent Systems and Robotics (ISIR)</a> working on latent generative modeling and human-robot interactions. Previously, I was a doctoral researcher in the BD team at <a href="https://www.lip6.fr" class="red-link">LIP6</a> Computer Science Laboratory of Sorbonne University, and a doctoral fellow at the <a href="https://scai.sorbonne-universite.fr" class="red-link">Sorbonne Center for Artificial Intelligence (SCAI)</a>, where I completed my doctorate in data mining and information retrieval. Alongside my PhD, I pursued a post-master's degree in Entrepreneurial Project Management at <a href="https://www.celsa.fr" class="red-link">CELSA</a>, further broadening my managerial skills. I hold an M.Sc. degree (Honors) in Computer Science from the <a href="https://www.universite-lyon.fr/version-francaise/" class="red-link">University of Lyon (UdL) </a> and a B.Sc. degree in Control Systems from <a href="https://www.timeshighereducation.com/world-university-rankings/shiraz-university" class="red-link">Shiraz University</a>.
-
-                    </div>
-
-                    <div class="about-text">
-My research interests lie at the intersection of computer vision, machine learning, and artificial intelligence, with a particular focus on developing general-purpose, multimodal and multitask visual models. My work aims to move beyond conventional narrow and passive vision systems toward models capable of perception and decision-making within active agents interacting with the real world. This includes integrating advances in <u>language modeling</u>, <u>latent generative modeling</u>, <u>user modeling</u>, and <u>topic modeling</u> to enable richer representations and more adaptive, context-aware behavior.                     </div>
-
-                    <div class="about-text">
-                    During my graduate studies, I also had the opportunity to collaborate with and conduct visiting research at prestigious institutions such as <a href="https://lelab.orange.fr" class="red-link">Orange Labs</a>, <a href="https://www.cornell.edu" class="red-link">Cornell University</a>, <a href="https://www.mcgill.ca" class="red-link">McGill University</a>, and <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-ai-for-science/opportunities/" class="red-link">Microsoft AI Research</a> in Amsterdam, enriching my experience in both industry and academia through interdisciplinary research.
-                    </div>
-
-                    <div class="about-text">
-                        <strong>Prospective students:</strong> If you are interested in joining the ACIDE research group, please email me (rahimi AT isir.upmc.fr) with your CV. See below for research focus areas.
-                    </div>
-
-                    <div class="students-section">
-                        <strong>Current Students:</strong>
-                        <ul class="students-list">
-                            <li><a href="#" class="red-link">Jeanne Malecot</a></li>
-                        </ul>
-
-                        <strong>Former Students:</strong>
-                        <ul class="students-list">
-                            <li><a href="https://allaaboutaleb.com" class="red-link">Allaa Boutaleb</a> (Now at LIP6)</li>
-                            <li><a href="https://www.linkedin.com/in/samy-nehlil-985a3b188/" class="red-link">Samy NEHLIL</a> (Now at AXA)</li>
-                            <li><a href="https://www.linkedin.com/in/lucie-chenzhi/" class="red-link">Lucie Chen</a> (Now at Valeo)</li>
-                        </ul>
+                <div class="contact-box">
+                    <div class="about-section">
+                        <h2>About me:</h2>
+                        <div class="about-text">
+                            I am a research associate at <a href="https://www.sorbonne-universite.fr/en" class="red-link">Sorbonne University</a>, where I am a member of the ACIDE team at <a href="https://www.isir.upmc.fr/" class="red-link">Institute of Intelligent Systems and Robotics (ISIR)</a> working on latent generative modeling and human-robot interactions. Previously, I was a doctoral researcher in the BD team at <a href="https://www.lip6.fr" class="red-link">LIP6</a> Computer Science Laboratory of Sorbonne University, and a doctoral fellow at the <a href="https://scai.sorbonne-universite.fr" class="red-link">Sorbonne Center for Artificial Intelligence (SCAI)</a>, where I completed my doctorate in data mining and information retrieval. Alongside my PhD, I pursued a post-master's degree in Entrepreneurial Project Management at <a href="https://www.celsa.fr" class="red-link">CELSA</a>, further broadening my managerial skills. I hold an M.Sc. degree (Honors) in Computer Science from the <a href="https://www.universite-lyon.fr/version-francaise/" class="red-link">University of Lyon (UdL) </a> and a B.Sc. degree in Control Systems from <a href="https://www.timeshighereducation.com/world-university-rankings/shiraz-university" class="red-link">Shiraz University</a>.
+                        </div>
+                        <div class="about-text">
+                            My research interests lie at the intersection of computer vision, machine learning, and artificial intelligence, with a particular focus on developing general-purpose, multimodal and multitask visual models. My work aims to move beyond conventional narrow and passive vision systems toward models capable of perception and decision-making within active agents interacting with the real world. This includes integrating advances in <u>language modeling</u>, <u>latent generative modeling</u>, <u>user modeling</u>, and <u>topic modeling</u> to enable richer representations and more adaptive, context-aware behavior.
+                        </div>
+                        <div class="about-text">
+                            During my graduate studies, I also had the opportunity to collaborate with and conduct visiting research at prestigious institutions such as <a href="https://lelab.orange.fr" class="red-link">Orange Labs</a>, <a href="https://www.cornell.edu" class="red-link">Cornell University</a>, <a href="https://www.mcgill.ca" class="red-link">McGill University</a>, and <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-ai-for-science/opportunities/" class="red-link">Microsoft AI Research</a> in Amsterdam, enriching my experience in both industry and academia through interdisciplinary research.
+                        </div>
+                        <div class="about-text">
+                            <strong>Prospective students:</strong> If you are interested in joining the ACIDE research group, please email me (rahimi AT isir.upmc.fr) with your CV. See below for research focus areas.
+                        </div>
+                        <div class="students-section">
+                            <strong>Current Students:</strong>
+                            <ul class="students-list">
+                                <li><a href="#" class="red-link">Jeanne Malecot</a></li>
+                            </ul>
+                            <strong>Former Students:</strong>
+                            <ul class="students-list">
+                                <li><a href="https://allaaboutaleb.com" class="red-link">Allaa Boutaleb</a> (Now at LIP6)</li>
+                                <li><a href="https://www.linkedin.com/in/samy-nehlil-985a3b188/" class="red-link">Samy NEHLIL</a> (Now at AXA)</li>
+                                <li><a href="https://www.linkedin.com/in/lucie-chenzhi/" class="red-link">Lucie Chen</a> (Now at Valeo)</li>
+                            </ul>
                         </div>
                     </div>
-            </div>
+                </div>
 
-                     <div class="contact-box">
-                <h3>Literary work</h3>
-                <p>
-                    Beyond my academic work, I am also a literary translator. I have translated four books from English into Persian and published several critical articles in prestigious magazines in Iran.
-                </p>
-                <div class="portfolio-gallery">
-                    <div class="portfolio-item">
-                        <img src="./images/books/camus.jpg" alt="Book Translation 1">
-                        <div class="portfolio-item-caption">A. Camus (2020)</div>
+                <div class="contact-box">
+                    <h3>Literary work</h3>
+                    <p>
+                        Beyond my academic work, I am also a literary translator. I have translated four books from English into Persian and published several critical articles in prestigious magazines in Iran.
+                    </p>
+                    <div class="portfolio-gallery">
+                        <div class="portfolio-item">
+                            <img src="./images/books/camus.jpg" alt="Book Translation 1">
+                            <div class="portfolio-item-caption">A. Camus (2020)</div>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="./images/books/darya.jpg" alt="Book Translation 2">
+                            <div class="portfolio-item-caption">A. Camus (2019)</div>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="./images/books/shazdeh.jpg" alt="Book Translation 3">
+                            <div class="portfolio-item-caption">A. Roemmers (2018)</div>
+                        </div>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="./images/books/darya.jpg" alt="Book Translation 2">
-                        <div class="portfolio-item-caption">A. Camus (2019)</div>
+                </div>
+
+                <div class="contact-box">
+                    <h3>Publications</h3>
+                    <div class="publication">
+                        <img src="./images/publications/result-final_page-0001.jpg">
+                        <div class="publication-content">
+                            <h3>User-VLM 360°: Personalized Vision Language Models with User-aware Tuning for Social Human-Robot Interactions</h3>
+                            <p>Hamed Rahimi, A. Bahaj, M. Abrini, M. Khoramshahi, M. Ghogho, M. Chetouani</p>
+                            <p><em>ICMI 2025</em></p>
+                            <div class="publication-buttons">
+                                <a href="https://hamedr96.github.io/User-VLM/" class="button">PROJECT PAGE</a>
+                                <a href="https://github.com/hamedR96/User-VLM" class="button">Code</a>
+                                <a href="https://huggingface.co/ACIDE/User-VLM-10B-Instruct" class="button">Model</a>
+                                <a href="https://huggingface.co/ACIDE" class="button">Data</a>
+                                <a href="https://arxiv.org/abs/2502.10636" class="button">PDF</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="./images/books/shazdeh.jpg" alt="Book Translation 3">
-                        <div class="portfolio-item-caption">A. Roemmers (2018)</div>
+
+                    <div class="publication">
+                        <img src="./images/publications/arch-2_page-0001.jpg" alt="Publication Preview" >
+                        <div class="publication-content">
+                            <h3>Reasoning LLMs for User-Aware Multimodal Conversational Agents</h3>
+                            <p>Hamed Rahimi, J. Cattoni, M. Beghili, M. Abrini, M. khoramshahi,  M. Pino, M. Chetouani</p>
+                            <p><em>IEEE RO-MAN 2025</em></p>
+                            <div class="publication-buttons">
+                                <a href="https://arxiv.org/abs/2504.01700" class="button">PDF</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-<div class="contact-box">
-    <h3>Publications</h3>
-        <div class="publication">
-            <img src="./images/publications/result-final_page-0001.jpg">
-            <div class="publication-content">
-                <h3>User-VLM 360°: Personalized Vision Language Models with User-aware Tuning for Social Human-Robot Interactions</h3>
-                <p>Hamed Rahimi, A. Bahaj, M. Abrini, M. Khoramshahi, M. Ghogho, M. Chetouani</p>
-                <p><em>ICMI 2025</em></p>
-                <div class="publication-buttons">
-                    <a href="https://hamedr96.github.io/User-VLM/" class="button">PROJECT PAGE</a>
-                    <a href="https://github.com/hamedR96/User-VLM" class="button">Code</a>
-                    <a href="https://huggingface.co/ACIDE/User-VLM-10B-Instruct" class="button">Model</a>
-                   <a href="https://huggingface.co/ACIDE" class="button">Data</a>
-                    <a href="https://arxiv.org/abs/2502.10636" class="button">PDF</a>
-                </div>
-            </div>
-        </div>
+                    <div class="publication">
+                        <img src="./images/publications/0.png" alt="Publication Preview" >
+                        <div class="publication-content">
+                            <h3>How Well Do Large Language Models Extract Keywords? A Systematic Evaluation on Scientific Corpora</h3>
+                            <p>Nacef Ben Mansour, Hamed Rahimi, Motasem Alrahabi</p>
+                            <p><em>AISD @ NAACL 2025</em></p>
+                            <div class="publication-buttons">
+                                <a href="https://aclanthology.org/2024.aisd-main.2/" class="button">PDF</a>
+                            </div>
+                        </div>
+                    </div>
 
-      <div class="publication">
-        <img src="./images/publications/arch-2_page-0001.jpg" alt="Publication Preview" >
-        <div class="publication-content">
-                <h3>Reasoning LLMs for User-Aware Multimodal Conversational Agents</h3>
-                <p>Hamed Rahimi, J. Cattoni, M. Beghili, M. Abrini, M. khoramshahi,  M. Pino, M. Chetouani</p>
-                <p><em>IEEE RO-MAN 2025</em></p>
-                <div class="publication-buttons">
-                <a href="https://arxiv.org/abs/2504.01700" class="button">PDF</a>
-                </div>
-            </div>
-        </div>
+                    <div class="publication">
+                        <img src="./images/publications/arch5.png" alt="Publication Preview">
+                        <div class="publication-content">
+                            <h3>Demographic User Modeling for Social Robotics with Multimodal Pre-trained Models</h3>
+                            <p>Hamed Rahimi, Mouad Abrini, Mahdi Khoramshahi, Mohamed Chetouani</p>
+                            <p><em>ICMI 2025</em></p>
+                            <div class="publication-buttons">
+                                <a href="https://arxiv.org/abs/2502.10642" class="button">PDF</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="publication">
-            <img src="./images/publications/0.png" alt="Publication Preview" >
-            <div class="publication-content">
-                <h3>How Well Do Large Language Models Extract Keywords? A Systematic Evaluation on Scientific Corpora</h3>
-                <p>Nacef Ben Mansour, Hamed Rahimi, Motasem Alrahabi</p>
-                <p><em>AISD @ NAACL 2025</em></p>
-            <div class="publication-buttons">
-                <a href="https://aclanthology.org/2024.aisd-main.2/" class="button">PDF</a>
-            </div>
-            </div>
-          </div>
+                    <div class="publication">
+                        <img src="./images/publications/arc2.png" alt="Publication Preview" >
+                        <div class="publication-content">
+                            <h3>User-VLM: LLM Contextualization with Multimodal Pre-trained User Models</h3>
+                            <p>Hamed Rahimi, Mahdi khoramshahi, Mouad Abrini, Mohamed CHETOUANI</p>
+                            <p><em>ToM4AI @ AAAI 2025</em></p>
+                            <div class="publication-buttons">
+                                <a href="https://www.researchgate.net/profile/Mahdi-Khoramshahi/publication/387131334_User-VLM_LLM_Contextualization_with_Multimodal_Pre-trained_User_Models/links/67619ccae9b25e24af5c9b95/User-VLM-LLM-Contextualization-with-Multimodal-Pre-trained-User-Models.pdf" class="button">PDF</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="publication">
-        <img src="./images/publications/arch5.png" alt="Publication Preview">
-        <div class="publication-content">
-            <h3>Demographic User Modeling for Social Robotics with Multimodal Pre-trained Models</h3>
-            <p>Hamed Rahimi, Mouad Abrini, Mahdi Khoramshahi, Mohamed Chetouani</p>
-            <p><em>ICMI 2025</em></p>
-            <div class="publication-buttons">
-                <a href="https://arxiv.org/abs/2502.10642" class="button">PDF</a>
-            </div>
-        </div>
-    </div>
+                    <div class="publication">
+                        <img src="./images/publications/cpmi2.png" alt="Publication Preview">
+                        <div class="publication-content">
+                            <h3>Contextualized Topic Coherence Metrics</h3>
+                            <p>Hamed Rahimi, David Mimno, Jacob Hoover, Hubert Naacke, Camelia Constantin, Bernd Amann</p>
+                            <p><em>EACL 2024</em></p>
+                            <div class="publication-buttons">
+                                <a href="https://aclanthology.org/2024.findings-eacl.123/" class="button">PDF</a>
+                                <a href="https://aclanthology.org/2024.findings-eacl.123.mp4" class="button">VIDEO</a>
+                                <a href="https://aclanthology.org/attachments/2024.findings-eacl.123.software.zip" class="button">Code</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="publication">
-        <img src="./images/publications/arc2.png" alt="Publication Preview" >
+                    <div class="publication">
+                        <img src="./images/publications/architecture.png" alt="Publication Preview">
+                        <div class="publication-content">
+                            <h3>ANTM: Aligned Neural Topic Models for Exploring Evolving Topics</h3>
+                            <p>Hamed Rahimi, Hubert Naacke, Camelia Constantin, Bernd Amann</p>
+                            <p><em>TLDKS 2024</em></p>
+                            <div class="publication-buttons">
+                                <a href="https://github.com/hamedR96/ANTM" class="button">Code</a>
+                                <a href="https://link.springer.com/chapter/10.1007/978-3-662-69603-3_3" class="button">PDF</a>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="publication-content">
-            <h3>User-VLM: LLM Contextualization with Multimodal Pre-trained User Models</h3>
-            <p>Hamed Rahimi, Mahdi khoramshahi, Mouad Abrini, Mohamed CHETOUANI</p>
-            <p><em>ToM4AI @ AAAI 2025</em></p>
-            <div class="publication-buttons">
-                <a href="https://www.researchgate.net/profile/Mahdi-Khoramshahi/publication/387131334_User-VLM_LLM_Contextualization_with_Multimodal_Pre-trained_User_Models/links/67619ccae9b25e24af5c9b95/User-VLM-LLM-Contextualization-with-Multimodal-Pre-trained-User-Models.pdf" class="button">PDF</a>
-            </div>
-        </div>
-    </div>
+                    <div class="publication">
+                        <img src="./images/publications/sample_topic_graph_T825C10_crop.graphml.png" alt="Publication Preview">
+                        <div class="publication-content">
+                            <h3>ATEM: A Topic Evolution Model for the Detection of Emerging Topics in Scientific Archives</h3>
+                            <p>Hamed Rahimi, Hubert Naacke, Camelia Constantin, Bernd Amann</p>
+                            <p><em>COMPLEX NETWORKS 2023</em></p>
+                            <div class="publication-buttons">
+                                <a href="https://gitlab.lip6.fr/equipebd/atem" class="button">Code</a>
+                                <a href="https://link.springer.com/chapter/10.1007/978-3-031-53472-0_28" class="button">PDF</a>
+                            </div>
+                        </div>
+                    </div>
 
-     <div class="publication">
-        <img src="./images/publications/cpmi2.png" alt="Publication Preview">
-        <div class="publication-content">
-            <h3>Contextualized Topic Coherence Metrics</h3>
-            <p>Hamed Rahimi, David Mimno, Jacob Hoover, Hubert Naacke, Camelia Constantin, Bernd Amann</p>
-            <p><em>EACL 2024</em></p>
-            <div class="publication-buttons">
-                <a href="https://aclanthology.org/2024.findings-eacl.123/" class="button">PDF</a>
-                <a href="https://aclanthology.org/2024.findings-eacl.123.mp4" class="button">VIDEO</a>
-                <a href="https://aclanthology.org/attachments/2024.findings-eacl.123.software.zip" class="button">Code</a>
-            </div>
-        </div>
-    </div>
+                    <div class="publication">
+                        <img src="./images/publications/SmashAgent.png" alt="Publication Preview">
+                        <div class="publication-content">
+                            <h3>SMASH: a Semantic-enabled Multi-agent Approach for Self-adaptation of Human-centered IoT</h3>
+                            <p>Hamed Rahimi, Iago Felipe Trentin, Fano Ramparany, Olivier Boissier</p>
+                            <p><em> PAAMS 2021</em></p>
+                            <div class="publication-buttons">
+                                <a href="https://link.springer.com/chapter/10.1007/978-3-030-85739-4_17" class="button">PDF</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="publication">
-        <img src="./images/publications/architecture.png" alt="Publication Preview">
-        <div class="publication-content">
-            <h3>ANTM: Aligned Neural Topic Models for Exploring Evolving Topics</h3>
-            <p>Hamed Rahimi, Hubert Naacke, Camelia Constantin, Bernd Amann</p>
-            <p><em>TLDKS 2024</em></p>
-            <div class="publication-buttons">
-                <a href="https://github.com/hamedR96/ANTM" class="button">Code</a>
-                <a href="https://link.springer.com/chapter/10.1007/978-3-662-69603-3_3" class="button">PDF</a>
-            </div>
-        </div>
-    </div>
+                    <div class="publication">
+                        <img src="./images/publications/q-ar.png" alt="Publication Preview">
+                        <div class="publication-content">
+                            <h3>Q-SMASH: Q-Learning-based Self-Adaptation of Human-Centered Internet of Things</h3>
+                            <p>Hamed Rahimi, Iago Felipe Trentin, Fano Ramparany, Olivier Boissier</p>
+                            <p><em> WI-IAT 2021 </em></p>
+                            <div class="publication-buttons">
+                                <a href="https://dl.acm.org/doi/abs/10.1145/3486622.3493974" class="button">PDF</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="publication">
-        <img src="./images/publications/sample_topic_graph_T825C10_crop.graphml.png" alt="Publication Preview">
-        <div class="publication-content">
-            <h3>ATEM: A Topic Evolution Model for the Detection of Emerging Topics in Scientific Archives</h3>
-            <p>Hamed Rahimi, Hubert Naacke, Camelia Constantin, Bernd Amann</p>
-            <p><em>COMPLEX NETWORKS 2023</em></p>
-            <div class="publication-buttons">
-                <a href="https://gitlab.lip6.fr/equipebd/atem" class="button">Code</a>
-                <a href="https://link.springer.com/chapter/10.1007/978-3-031-53472-0_28" class="button">PDF</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="publication">
-        <img src="./images/publications/SmashAgent.png" alt="Publication Preview">
-        <div class="publication-content">
-            <h3>SMASH: a Semantic-enabled Multi-agent Approach for Self-adaptation of Human-centered IoT</h3>
-            <p>Hamed Rahimi, Iago Felipe Trentin, Fano Ramparany, Olivier Boissier</p>
-            <p><em> PAAMS 2021</em></p>
-            <div class="publication-buttons">
-                <a href="https://link.springer.com/chapter/10.1007/978-3-030-85739-4_17" class="button">PDF</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="publication">
-        <img src="./images/publications/q-ar.png" alt="Publication Preview">
-        <div class="publication-content">
-            <h3>Q-SMASH: Q-Learning-based Self-Adaptation of Human-Centered Internet of Things</h3>
-            <p>Hamed Rahimi, Iago Felipe Trentin, Fano Ramparany, Olivier Boissier</p>
-            <p><em> WI-IAT 2021 </em></p>
-            <div class="publication-buttons">
-                <a href="https://dl.acm.org/doi/abs/10.1145/3486622.3493974" class="button">PDF</a>
                 </div>
             </div>
         </div>
 
+        <footer class="footer">
+            <div class="social-icons">
+                <a href="mailto:hamed.rahimi@sorbonne-universite.fr" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://scholar.google.com/citations?user=OEcBSosAAAAJ&hl=en" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://github.com/hamedR96" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ham3d-rahimi/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="copyright">
+                © Copyright 2025. Last updated: Jul 22, 2025.
+            </div>
+        </footer>
     </div>
- </div>
- </div>
-
-<footer class="footer">
-    <div class="social-icons">
-        <a href="mailto:hamed.rahimi@sorbonne-universite.fr" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://scholar.google.com/citations?user=OEcBSosAAAAJ&hl=en" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-        <a href="https://github.com/hamedR96" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/ham3d-rahimi/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="copyright">
-        © Copyright 2025. Last updated: Jul 22, 2025.
-    </div>
-</footer>
-</div>
 </body>
 </html>
